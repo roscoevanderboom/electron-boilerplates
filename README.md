@@ -18,7 +18,7 @@ npm install
 # or
 yarn
 ```
-## 🛫 Build and package
+## 👽 Build and package
 ```sh
 npm run build
 #or

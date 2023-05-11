@@ -14,8 +14,16 @@ export interface ActionProps {
 
 export interface InitialState {
   loading: boolean;
+  leftDrawer: boolean;
   nav: NavigateFunction;
   dispatch: Dispatch;
+  toggleTheme: () => void;
+  toggleDrawer: () => void;
 }
 
 export type Dispatch = (type: string, payload: any) => void;
+
+export type DeepPartial<T> = {
+  [P in keyof T]?: T[P] extends Function ? T[P] : DeepPartial<T[P]>;
+};
+

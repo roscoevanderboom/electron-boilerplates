@@ -1,9 +1,8 @@
 import { Navigate, createMemoryRouter } from "react-router-dom";
 import App from "./pages/App";
-import Login from "./pages/login";
 import Home from "./pages/home";
-import Profile from "./pages/home/profile";
-import Settings from "./pages/home/settings";
+import Welcome from "./pages/welcome";
+import MultichainInfo from "./pages/home/profilePage";
 
 export default createMemoryRouter(
   [
@@ -12,28 +11,24 @@ export default createMemoryRouter(
       element: <App />,
       children: [
         {
-          path: "login",
-          element: <Login />,
-        },
+          path: "welcome",
+          element: <Welcome />,
+        }, 
         {
           path: "home",
           element: <Home />,
           children: [
-            { index: true, element: <Navigate to="home/profile" replace /> },
+            { index: true, element: <Navigate to="home/info" replace /> },
             {
-              path: "profile",
-              element: <Profile />,
-            },
-            {
-              path: "settings",
-              element: <Settings />,
-            },
+              path: "info",
+              element: <MultichainInfo />,
+            }, 
           ],
         },
       ],
     },
   ],
   {
-    initialEntries: ["/login"],
+    initialEntries: ["/home/info"],
   }
 );

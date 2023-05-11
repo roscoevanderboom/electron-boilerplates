@@ -1,9 +1,12 @@
 import { InitialState } from "@/data/interfaces";
 
-const initial_state = {
+const initial_state: InitialState = {
   loading: false,
-  nav: () => (null),
-  dispatch: (type: string, payload: any) => null,
+  leftDrawer: false,
+  nav: () => null,
+  dispatch: (_te: string, _p: any) => null,
+  toggleTheme: () => null,
+  toggleDrawer: () => null,
 };
 
 export default initial_state;

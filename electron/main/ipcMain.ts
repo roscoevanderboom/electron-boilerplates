@@ -43,20 +43,6 @@ export const handleIPCmain = ({ preload, url, indexHtml, win }: Props) => {
     }
   });
 
-  ipcMain.on("window-control", (_, args) => {
-    switch (args) {
-      case "minimize":
-        return win?.minimize();
-      case "maximize":
-        return win?.isMaximized() ? win?.unmaximize() : win?.maximize();
-      case "hide":
-        return win?.hide();
-      case "close":
-        return win?.close();
-      default:
-        return;
-    }
-  });
   ipcMain.on("app-menu", (_, args) => {
     switch (args) {
       case "reload":

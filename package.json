@@ -3,7 +3,10 @@
   "version": "2.2.0",
   "main": "dist-electron/main/index.js",
   "description": "Electron Vite React boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
+  "author": {
+    "email": "roscoevanderboom@gmail.com",
+    "name": "Roscoe van der Boom"
+  },
   "license": "MIT",
   "private": true,
   "debug": {

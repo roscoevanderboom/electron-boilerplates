@@ -1,7 +1,6 @@
 import { app, BrowserWindow, shell } from "electron";
 import { release } from "node:os";
 import { join } from "node:path";
-import { update } from "./update";
 import mainWindowConfig from "./mainWindowConfig";
 import { handleIPCmain } from "./ipcMain";
 
@@ -66,9 +65,6 @@ async function createWindow() {
     if (url.startsWith("https:")) shell.openExternal(url);
     return { action: "deny" };
   });
-
-  // Apply electron-updater
-  update(win);
 
   handleIPCmain({ preload, url, indexHtml, win });
 }

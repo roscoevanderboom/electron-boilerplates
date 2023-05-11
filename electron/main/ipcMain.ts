@@ -1,4 +1,4 @@
-import { BrowserWindow, app, desktopCapturer, dialog, ipcMain } from "electron";
+import { BrowserWindow, dialog, ipcMain } from "electron";
 
 type Props = {
   preload: string;
